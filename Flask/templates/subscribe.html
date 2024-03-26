@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %} Subscribe {% endblock %}
+{% block content %}
+
+{% if error %}
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{error}}!</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+<div class="container">
+    <h1>Subscribe to my newsletter</h1>
+  <form action="/form" method="POST">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Frist Name"
+        name="First Name"
+        value= "{{first}}"
+      />
+      <br>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Second Name"
+        name="Second Name"
+        value= "{{second}}"
+      />
+      <br>
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Email"
+        name="Email"
+        value= "{{email}}"
+      />
+      <br>
+    <button type="submit" class="btn btn-secondary">Submit</button>
+  </form>
+</div>
+{% endblock %}

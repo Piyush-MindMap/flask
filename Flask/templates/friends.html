@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %} {{tile}} {% endblock %}
+{% block content  %}
+    <div class="container">
+      <h1>Friend List</h1>
+      <br><br>
+      <form action="/friends" METHOD="POST">
+
+        <input type="text" placeholder="Name" name="name">
+        <input type="submit" value="Add Name" class="btn btn-secondary">
+
+      </form>
+      {% if dost %}
+        <ul>
+      {% for i in dost %}
+        <li>{{i.name}}</li>
+      {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+{% endblock  %}
+
+
+    

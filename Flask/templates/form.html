@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %} {{title}} {% endblock %}
+
+    {% block content %}
+        <div class="container">
+            <h1> {{firstName}}, Thank you for subscribing</h1>
+            <p> Dear {{firstName}} {{secondName}}, you would be receiving newsletters to your email address, {{email}}</p>            
+        </div>
+    {% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{%  block title %} {{title}} {% endblock %}
+{% block content %}
+
+<div class="container">
+    <h1> Our Subcribers </h1>
+    <br>
+    
+    <p> 
+        We have {{count}} 
+        {% if count > 1 %}
+            subcribers
+        {% else %}
+            subcriber
+        {% endif %}
+    </p>
+    
+    {% if subs %}  
+        <ol>
+        {% for i in subs %}
+            <li>{{i}}</li>
+        {% endfor %}
+        </ol>
+    {% endif %}
+    
+</div>
+
+{% endblock %}
